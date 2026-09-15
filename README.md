@@ -105,4 +105,6 @@ UMLith-Final/
 ```
 
 ## Screenshots
-
+<img width="947" height="478" alt="image" src="https://github.com/user-attachments/assets/1728ed8c-cd1c-4de9-8d90-1ef859676506" />
+<img width="946" height="458" alt="image" src="https://github.com/user-attachments/assets/feb36bbe-9f19-44d0-995e-64413c9e0d93" />
+<img width="949" height="471" alt="image" src="https://github.com/user-attachments/assets/314f1eff-46b7-47ad-b251-4b8f8f8988f7" />
