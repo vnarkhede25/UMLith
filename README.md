@@ -106,12 +106,3 @@ UMLith-Final/
 
 ## Screenshots
 
-### UMLith workspace
-
-![UMLith workspace](docs/screenshots/umlith-interface.png)
-
-The workspace includes the UML canvas, diagram statistics, editing toolbar, relationship editor, and Java source generator. Add the screenshot file at `docs/screenshots/umlith-interface.png` when updating project documentation.
-
-## Student Information
-
-UMLith was developed by Vaishnavi Narkhede, Roll No. 48.
