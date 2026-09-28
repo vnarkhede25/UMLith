@@ -5,6 +5,7 @@ const relations = [
   ["association", "Association"],
   ["inheritance", "Inheritance"],
   ["implementation", "Implementation"],
+  ["dependency", "Dependency"],
   ["aggregation", "Aggregation"],
   ["composition", "Composition"]
 ];

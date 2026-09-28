@@ -20,6 +20,7 @@ const edgeStyle = {
   association: { strokeWidth: 1.8 },
   inheritance: { strokeWidth: 2.2, strokeDasharray: "0", markerEnd: { type: MarkerType.ArrowClosed } },
   implementation: { strokeWidth: 2, strokeDasharray: "7 5", markerEnd: { type: MarkerType.ArrowClosed } },
+  dependency: { strokeWidth: 1.8, strokeDasharray: "4 4", markerEnd: { type: MarkerType.Arrow } },
   aggregation: { strokeWidth: 2, markerStart: { type: MarkerType.Diamond } },
   composition: { strokeWidth: 2, markerStart: { type: MarkerType.DiamondClosed } }
 };

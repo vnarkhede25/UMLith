@@ -105,6 +105,7 @@ export function generateJavaClass(node, nodes, edges) {
 
   const imports = new Set();
   const generatedRelationshipAttributes = [];
+  const dependencyComments = [];
 
   outgoing.forEach(({ edge, target }) => {
     const relation = normalizeRelation(edge);
@@ -113,6 +114,9 @@ export function generateJavaClass(node, nodes, edges) {
       generatedRelationshipAttributes.push(field);
       if (field.needsList) imports.add("java.util.List");
       if (field.needsList) imports.add("java.util.ArrayList");
+    } else if (relation.type === "dependency") {
+      const targetName = sanitizeJavaIdentifier(target.data.name, "RelatedClass");
+      dependencyComments.push(`    // Depends on ${targetName}${relation.label ? ` (${relation.label})` : ""}`);
     }
   });
 
@@ -128,7 +132,7 @@ export function generateJavaClass(node, nodes, edges) {
     f => `    ${vis("private")}${f.type} ${f.fieldName}${f.needsList ? ` = ${f.initializer}` : ""};`
   );
 
-  const attributes = [...declaredAttributes, ...relationshipAttributes];
+  const attributes = [...dependencyComments, ...declaredAttributes, ...relationshipAttributes];
 
   const methods = (data.methods || []).map(m => methodCode(m, isInterface));
 
